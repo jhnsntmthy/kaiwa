@@ -21,7 +21,7 @@ module.exports = HumanModel.define({
         mucDisplayName: {
             deps: ['id'],
             fn: function () {
-                return this.id.split('/')[1] || '';
+                return this.id.split('/')[1].split("@")[0] || '';
             }
         },
         idle: {

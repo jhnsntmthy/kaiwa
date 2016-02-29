@@ -73,7 +73,8 @@ module.exports = HumanModel.define({
         displayName: {
             deps: ['name', 'jid'],
             fn: function () {
-                return this.name || this.jid;
+                var nm = this.name || this.jid
+                return nm.split("@")[0];
             }
         },
         displayUnreadCount: {

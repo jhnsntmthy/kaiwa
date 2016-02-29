@@ -55,7 +55,8 @@ module.exports = HumanModel.define({
         displayName: {
             deps: ['nick', 'jid'],
             fn: function () {
-                return this.nick || this.jid.bare;
+                var str = this.nick || this.jid.bare
+                return str.split("@")[0];
             }
         },
         streamUrl: {
@@ -98,7 +99,7 @@ module.exports = HumanModel.define({
         }
     },
     getName: function () {
-        return this.displayName;
+        return this.displayName.split("@")[0];
     },
     getNickname: function () {
         return this.displayName != this.nick ? this.nick : '';
