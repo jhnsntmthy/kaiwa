@@ -1737,6 +1737,9 @@ button.secondary:hover:not(:disabled) {
 .logout {
   margin-right: 5px;
 }
+.aux {
+  background: #999;
+}
 .aux header {
   margin-top: 8%;
   text-align: center;
@@ -1749,7 +1752,7 @@ button.secondary:hover:not(:disabled) {
   margin: auto;
   margin-top: 5%;
   padding: 20px 0;
-  background: #fff;
+  background: #ccc;
   width: 75%;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -1775,7 +1778,7 @@ button.secondary:hover:not(:disabled) {
 }
 .box .head {
   margin-bottom: 20px;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 4px solid #999;
 }
 .box input {
   width: 100%;
@@ -1871,9 +1874,9 @@ button.secondary:hover:not(:disabled) {
   float: left;
 }
 #calls button {
-  min-width: auto;
-  background-color: rgba(255,255,255,0.3);
 rgba(0,0,0,0.1)
+  background-color: rgba(255,255,255,0.3);
+rgba(255,255,255,0.5)
   width: 100px;
   margin-right: 10px;
   font-size: 17px;
