@@ -40,8 +40,8 @@
     "xmpp-constants": "^2.2.2"
   },
   "devDependencies": {
-    "browserify": "^11.0.1",
-    "precommit-hook": "^3.0.0"
+    "browserify": "11.0.1",
+    "precommit-hook": "3.0.0"
   },
   "license": "MIT",
   "main": "server.js",
@@ -55,5 +55,8 @@
     "validate": "npm ls"
   },
   "pre-commit": [
+    "lint",
+    "validate",
+    "test"
   ]
 }

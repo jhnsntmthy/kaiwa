@@ -344,7 +344,8 @@ var clientApp = new Moonboots({
             __dirname + '/clientapp/libraries/jquery-impromptu.js'
         ],
         browserify: {
-            debug: false
+            debug: true,
+            insertGlobals: false
         },
         stylesheets: [
             __dirname + '/public/css/client.css',
