@@ -13,8 +13,8 @@ module.exports = BaseCollection.extend({
         var show1 = model1.show;
         var show2 = model2.show;
 
-        var name1 = model1.displayName.toLowerCase().split("@")[0];
-        var name2 = model2.displayName.toLowerCase().split("@")[0];
+        var name1 = model1.displayName.toLowerCase().humanizeJabbername;
+        var name2 = model2.displayName.toLowerCase().humanizeJabbername;
 
         if (show1 === show2) {
 

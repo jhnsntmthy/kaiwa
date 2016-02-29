@@ -335,6 +335,7 @@ var clientApp = new Moonboots({
         main: __dirname + '/clientapp/app.js',
         developmentMode: config.isDev,
         libraries: [
+            __dirname + '/clientapp/libraries/prototypes.js',
             __dirname + '/clientapp/libraries/jquery.js',
             __dirname + '/clientapp/libraries/ui.js',
             __dirname + '/clientapp/libraries/resampler.js',
@@ -386,6 +387,7 @@ clientApp.on('ready', function () {
 
     // serves app on every other url
     app.get('*', function (req, res) {
+        res.set('Content-Type', 'text/cache-manifest');
         res.render(clientApp.moonboots.htmlSource());
     });
 });

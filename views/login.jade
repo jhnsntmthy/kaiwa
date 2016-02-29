@@ -11,15 +11,15 @@ block content
         form
             .fieldContainer
                 label(for='username') Username
-                input(type='text', id='jid', name='jid', placeholder='you', tabindex='1', autofocus)
+                input(type='text', id='jid', name='jid', placeholder='username', tabindex='1', autofocus)
             .fieldContainer
                 label(for='password') Password
-                input(type='password', id='password', name='password', placeholder='•••••••••••••', tabindex='2')
+                input(type='password', id='password', name='password', placeholder='password', tabindex='2')
             .fieldContainer.fieldContainerWSS
                 label(for='wsURL') WebSocket or BOSH URL
                 input(type='text', id='connURL', name='connURL', placeholder='wss://aweso.me:5281/xmpp-websocket', tabindex='3')
 
-            button(type='submit', tabindex='3', class="primary") Go!
+            button(type='submit', tabindex='3', class="primary") LOGIN
 
 block scripts
     script(src="/config.js")

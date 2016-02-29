@@ -74,7 +74,7 @@ module.exports = HumanModel.define({
             deps: ['name', 'jid'],
             fn: function () {
                 var nm = this.name || this.jid
-                return nm.split("@")[0];
+                return nm.humanizeJabbername();
             }
         },
         displayUnreadCount: {
