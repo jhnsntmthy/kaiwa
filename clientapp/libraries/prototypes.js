@@ -29,5 +29,9 @@ String.prototype.humanizeJabbername = function() {
   return chain.reduce(pipeline, this).trim();
 };
 
+String.prototype.removeSnapEngage = function() {
+  return this.replace(/(more details)\b.*/gi, '');
+};
+
 // console.log("gary.sdnsoidf@sdsfjsdf.csisdf.sdfwe".humanizeJabbername());
 // console.log("visitor1@sdsfjsdf.csisdf.sdfwe".humanizeJabbername());

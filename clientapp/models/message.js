@@ -108,7 +108,7 @@ var Message = module.exports = HumanModel.define({
         processedBody: {
             deps: ['body', 'meAction', 'mentions'],
             fn: function () {
-                var body = this.body;
+                var body = this.body.removeSnapEngage();
                 if (body) {
                     if (this.meAction) {
                         body = body.substr(4);
