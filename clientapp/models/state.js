@@ -53,7 +53,7 @@ module.exports = HumanModel.define({
         title: {
             deps: ['pageTitle', 'badge'],
             fn: function () {
-                var base = this.pageTitle ? 'Kaiwa - ' + this.pageTitle : 'Kaiwa';
+                var base = this.pageTitle ? 'COPILOT - ' + this.pageTitle : 'COPILOT';
                 if (this.badge) {
                     return this.badge + ' • ' + base;
                 }
