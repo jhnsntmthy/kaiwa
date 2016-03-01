@@ -246,7 +246,10 @@ module.exports = BasePage.extend({
         var msgDate = Date.create(model.timestamp);
         var messageDay = msgDate.format('{month} {ord}, {yyyy}');
 
+        console.log("appendmodel", model, preload);
+
         if (this.firstModel === undefined || msgDate > Date.create(this.firstModel.timestamp)) {
+            console.log("msgDate", msgDate);
             if (this.firstModel === undefined) {
                 this.firstModel = model;
                 this.firstDate = messageDay;
@@ -276,6 +279,7 @@ module.exports = BasePage.extend({
         else {
             var scrollDown = this.$messageList.prop('scrollHeight') - this.$messageList.scrollTop();
             var firstEl = this.$messageList.find('li').first();
+            console.log("scrollDown", scrollDown);
 
             if (messageDay !== this.firstDate) {
                 var dayDivider = $(templates.includes.dayDivider({day_name: messageDay}));
