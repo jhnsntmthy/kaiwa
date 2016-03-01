@@ -21,9 +21,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(compression());
 app.use(serveStatic(__dirname + '/public'));
-if (!config.isDev) {
-    app.use(helmet.xframe());
-}
+// if (!config.isDev) {
+//     app.use(helmet.xframe());
+// }
 app.use(helmet.iexss());
 app.use(helmet.contentTypeOptions());
 
