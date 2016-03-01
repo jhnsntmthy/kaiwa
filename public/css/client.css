@@ -606,6 +606,7 @@ button.secondary:hover:not(:disabled) {
 }
 #menu h1 a {
   color: #ccc;
+  outline: none;
 }
 #menu h1 a :hover {
   text-decoration: underline;
